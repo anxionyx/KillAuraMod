@@ -23,7 +23,7 @@ jobs:
           gradle-version: 8.10.2   # Fabric Loom 1.7.4 requires Gradle 8.x
 
       - name: Build with Gradle
-        run: gradle build
+        run: gradle build --refresh-dependencies
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
