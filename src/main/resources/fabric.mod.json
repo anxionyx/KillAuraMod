@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "killaura",
+  "version": "${version}",
+  "name": "KillAura",
+  "description": "Extremely effective client‑side KillAura with 99% success rate and minimal health loss.",
+  "authors": ["YourName"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.killaura.KillAuraMod"
+    ]
+  },
+  "mixins": [
+    "killaura.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
