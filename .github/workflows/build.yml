@@ -1,7 +1,8 @@
 name: Build KillAura Mod
 
 on:
-  workflow_dispatch
+  workflow_dispatch:  # manual trigger only
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,8 +17,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Setup Gradle
+      - name: Setup Gradle with compatible version
         uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.10.2   # Fabric Loom 1.7.4 requires Gradle 8.x
 
       - name: Build with Gradle
         run: gradle build
